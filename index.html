@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Memory Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Virtual Memory Manager Simulation</h1>
+        
+        <form id="memory-settings-form">
+            <h2>Memory Settings</h2>
+            <label>Number of Virtual Pages:</label>
+            <input type="number" id="num-pages" min="1" value="8" required>
+            
+            <label>Number of Physical Frames:</label>
+            <input type="number" id="num-frames" min="1" value="4" required>
+            
+            <label>Page Size (Bytes):</label>
+            <input type="number" id="page-size" min="1" value="1024" required>
+            
+            <button type="button" onclick="initializeMemoryManager()">Initialize Memory Manager</button>
+        </form>
+        
+        <div id="memory-access">
+            <h2>Access Memory</h2>
+            <label>Enter Virtual Address:</label>
+            <input type="number" id="virtual-address" min="0" required>
+            <button onclick="accessMemory()">Access</button>
+        </div>
+        
+        <div id="output">
+            <h2>Output</h2>
+            <pre id="output-log"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
